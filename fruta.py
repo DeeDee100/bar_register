@@ -14,6 +14,5 @@ class Frutas:
            'Unidades' : nova_fruta.quantidade
        }) 
 
-nova_fruta = Frutas.adicionar_a_fruteira()
-
-print(Frutas.fruteira)
+if __name__ == '__main__':
+    pass

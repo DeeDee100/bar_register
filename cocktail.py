@@ -30,5 +30,8 @@ class Drink:
         
         return novo_drink
 
-drink_adicionado = Drink.criar_drink()
-print(Drink.carta_drinks)
+#drink_adicionado = Drink.criar_drink()
+#print(Drink.carta_drinks)
+
+if __name__ == '__main__':
+    pass

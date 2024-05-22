@@ -70,10 +70,13 @@ def escolher_opcao():
         opcao_invalida()
 
 def main():
-    os.system('cls')
+    #os.system('cls')
+    print("Teste")
     exibir_titulo()
     exibir_opcoes()
     escolher_opcao()
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
+
+main()

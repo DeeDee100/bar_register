@@ -17,6 +17,8 @@ class Bebidas:
         })
         return nova_bebida
         
-bebida_adicionada = Bebidas.adicionar_ao_estoque()
-print(Bebidas.estoque)
+#bebida_adicionada = Bebidas.adicionar_ao_estoque()
+#print(Bebidas.estoque)
 
+if __name__ == '__main__':
+    pass

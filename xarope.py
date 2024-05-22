@@ -16,7 +16,3 @@ class Xaropes:
             'Volume': nova_bebida.mililitros 
         })
         return nova_bebida
-
-bebida_adicionada = Xaropes.adicionar_ao_armario()
-
-print(Xaropes.armario)

@@ -17,5 +17,6 @@ class Refrigerantes:
         })
         return nova_bebida
 
-bebida_adicionada = Refrigerantes.adicionar_ao_estoque()
-print(Refrigerantes.geladeira)
+
+if __name__ == '__main__':
+    pass
