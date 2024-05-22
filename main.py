@@ -1,4 +1,5 @@
 import os
+import shutil
 from cocktail import Drink
 from bebida import Bebidas
 from refrigerantes import Refrigerantes
@@ -9,8 +10,11 @@ ingredientes = []
 receitas = []
 
 def finalizar_app():
+    columns = shutil.get_terminal_size().columns
     os.system('cls')
-    print('Beba com moderação')
+    print('\n  \n ')
+    print("Beba com moderação".center(columns))
+    print('\n  \n ')
 
 
 def exibir_titulo():
@@ -25,14 +29,6 @@ def exibir_opcoes():
 
 
 
-def voltar_ao_menu():
-    input('\nPressione qualque tecla para voltar ao menu ')
-    main()
-
-def opcao_invalida():
-    print('Opção inválida\n')
-    voltar_ao_menu()
-
 
 def incluir_ingrediente():
     pass
@@ -40,43 +36,39 @@ def incluir_ingrediente():
 def registrar_receita():
     drink_adicionado = Drink.criar_drink()
     receitas.append(Drink.carta_drinks[-1]) 
-    voltar_ao_menu()
 
 def listar_drinks():
     print(receitas)
-    voltar_ao_menu()
 
 def listar_ingredientes():
     print(ingredientes)
-    voltar_ao_menu()
 
 def escolher_opcao():
-    try:
-        opcao_escolhida = int(input('Escolha uma opção: '))
-        
-        if opcao_escolhida == 1: 
-            registrar_receita()
-        elif opcao_escolhida == 2: 
-            incluir_ingrediente()
-        elif opcao_escolhida == 3: 
-            listar_drinks()
-        elif opcao_escolhida == 4:
-            listar_ingredientes()
-        elif opcao_escolhida == 5: 
-            finalizar_app()
-        else: 
-            opcao_invalida()
-    except:
-        opcao_invalida()
+    while True:
+        try:
+            opcao_escolhida = int(input('Escolha uma opção: '))
+            
+            if opcao_escolhida == 1: 
+                registrar_receita()
+            elif opcao_escolhida == 2: 
+                incluir_ingrediente()
+            elif opcao_escolhida == 3: 
+                listar_drinks()
+            elif opcao_escolhida == 4:
+                listar_ingredientes()
+            elif opcao_escolhida == 5: 
+                finalizar_app()
+                break
+            else: 
+                print('Opção inválida\n')
+        except:
+            print('Opção inválida\n')
 
 def main():
-    #os.system('cls')
-    print("Teste")
+    os.system('cls')
     exibir_titulo()
     exibir_opcoes()
     escolher_opcao()
 
-# if __name__ == '__main__':
-#     main()
-
-main()
+if __name__ == '__main__':
+    main()
