@@ -45,24 +45,22 @@ def listar_ingredientes():
 
 def escolher_opcao():
     while True:
-        try:
-            opcao_escolhida = int(input('Escolha uma opção: '))
+            opcao_escolhida = input('Escolha uma opção: ')
             
-            if opcao_escolhida == 1: 
+            if opcao_escolhida == "1": 
                 registrar_receita()
-            elif opcao_escolhida == 2: 
+            elif opcao_escolhida == "2": 
                 incluir_ingrediente()
-            elif opcao_escolhida == 3: 
+            elif opcao_escolhida == "3": 
                 listar_drinks()
-            elif opcao_escolhida == 4:
+            elif opcao_escolhida == "4":
                 listar_ingredientes()
-            elif opcao_escolhida == 5: 
+            elif opcao_escolhida == "5": 
                 finalizar_app()
                 break
             else: 
                 print('Opção inválida\n')
-        except:
-            print('Opção inválida\n')
+                exibir_opcoes()
 
 def main():
     os.system('cls')
